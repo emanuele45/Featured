@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.elkarte.net/site/package-info">
+<package-info xmlns="http://www.elkarte.net/site/package-info" xmlns:elk="http://www.elkarte.net/">
+	<license><![CDATA[
+/**
+ * Featured
+ *
+ * @author emanuele
+ * @license   BSD http://opensource.org/licenses/BSD-3-Clause
+ *
+ * @version 0.0.1
+ */
+	]]></license>
+	<id>emanuele:featured</id>
+	<name>Featured</name>
+	<version>0.0.1</version>
+	<type>modification</type>
+	<install for="1.0 - 1.0.99">
+		<require-file name="Featured.integrate.php" destination="SOURCEDIR" />
+		<require-file name="Featured.controller.php" destination="CONTROLLERDIR" />
+		<require-file name="Featured.template.php" destination="THEMEDIR" />
+		<require-file name="Featured.english.php" destination="LANGUAGEDIR/english" />
+		<require-file name="Featurer.class.php" destination="SUBSDIR" />
+		<require-dir name="subs/Featurer" destination="SUBSDIR" />
+		<require-dir name="subs/widgets" destination="SUBSDIR" />
+		<code>install.php</code>
+	</install>
+	<uninstall for="1.0 - 1.0.99">
+		<remove-file name="SOURCEDIR/Featured.integrate.php" />
+		<remove-file name="CONTROLLERDIR/Featured.controller.php" />
+		<remove-file name="THEMEDIR/Featured.template.php" />
+		<remove-file name="LANGUAGEDIR/english/Featured.english.php" />
+		<remove-file name="SUBSDIR/Featurer.class.php" />
+		<remove-dir name="SUBSDIR/Featurer" />
+		<remove-dir name="SUBSDIR/widgets" />
+		<code>install.php</code>
+	</uninstall>
+</package-info>
